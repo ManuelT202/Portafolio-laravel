@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container">
-  <div class="row">
+  <div class="row justify-content-center">
     <div class="col-sm-6">
       <h1>Detalle de cotización</h1>
       <p><strong>Cliente:</strong> {{ $users->find($quotes[0]->user_id)->name }}</p>
