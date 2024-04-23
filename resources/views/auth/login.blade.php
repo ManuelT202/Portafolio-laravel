@@ -4,12 +4,12 @@
 
 @section('content')
 
-<div class="container">
-  <div class="row">
+<div class="container" style="margin-top: 15vw">
+  <div class="row justify-content-center">
     <div class="col-sm-6">
-      <h1>Ingresar al sistema</h1>
+      <h1 class="text-center">Ingresar al sistema</h1>
       @if($errors->any())
-        <div class="alert alert-danger">
+        <div class="alert alert-danger text-center">
           <ul>
             @foreach($errors->all() as $error)
               <li>{{ $error }}</li>
@@ -17,7 +17,7 @@
           </ul>
         </div>
       @endif
-      <form method="POST" action="{{ route('login.store') }}">
+      <form method="POST" action="{{ route('login.store') }}" class="text-center">
         @csrf
         <div class="mb-3">
           <label for="email" class="form-label">Correo electrónico</label>
@@ -34,3 +34,4 @@
 </div>
 
 @endsection
+

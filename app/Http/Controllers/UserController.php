@@ -43,7 +43,8 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        return view('users.show', compact('user'));
+        $user_types = \App\Models\User_type::all();
+        return view('users.show', compact('user'), compact('user_types'));
     }
 
     /**

@@ -39,11 +39,10 @@ class LoginController extends Controller
         return back()->withErrors(['password' => 'Contraseña incorrecta']);
     }
 
-
-
     public function destroy()
     {
         session()->forget('user');
+        session()->forget('user_type');
         Auth::logout();
         session()->regenerate();
         return redirect()->route('home');

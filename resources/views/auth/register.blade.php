@@ -5,7 +5,7 @@
 @section('content')
 <div class="container">
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-6" style="margin-top: 15vw">
       <h1>Registrarse</h1>
       <form action="{{ route('register.store') }}" method="POST">
         @csrf
@@ -68,7 +68,13 @@
       </div>
       @endif
     </div>
+    <div class="col-sm-6" style="margin-top: 10vw">
+      <img src="{{ asset('images/5.png') }}" alt="Registro" class="img-fluid"/>
+    </div>
   </div>
 </div>
 @endsection
+
+
+
 

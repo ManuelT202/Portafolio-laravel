@@ -47,7 +47,7 @@ class RegisterController extends Controller
 
         $user = new User();
         $user->name = $request->input('name');
-        $user->email = $request->input('email');
+        $user->email = $request->input('email');    
         if ($request->input('password') != $request->input('password_confirmation')) {
             return redirect()->route('home');
         }

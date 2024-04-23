@@ -4,8 +4,8 @@
 
 @section('content')
 
-<div class="container">
-  <div class="row">
+<div class="container" style="margin-top: 15vw">
+  <div class="row justify-content-center">
     <div class="col-sm-6">
       <h1>Crear tipo de servicio</h1>
       <form method="POST" action="{{ route('service_types.store') }}">

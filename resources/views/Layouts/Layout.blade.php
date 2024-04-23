@@ -25,7 +25,6 @@
             height: 100vh;
             display: flex;
             justify-content: center;
-            overflow: hidden;
         }
 
         .punto-grande {
@@ -121,6 +120,111 @@
             color: rgb(255, 0, 38);
         }
 
+        .contenedor-portafolio {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .contenedor-portafolio:hover {
+            transform: scale(1.1);
+        }
+
+        .detalles-proyecto {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0,0,0,0.7);
+            display: none;
+        }
+
+        .detalles-proyecto img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100vw - 100px);
+            height: calc(100vh - 100px);
+            object-fit: cover;
+        }
+
+        .cerrar-detalles {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        .menu-lateral {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 300px;
+            background-color: #343a40;
+            transform: translateX(300px);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .menu-lateral.abierto {
+            transform: translateX(0);
+        }
+
+        .menu-lateral ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-lateral ul li {
+            padding: 10px 20px;
+        }
+
+        .menu-lateral ul li:hover {
+            background-color: #282d32;
+        }
+
+        .menu-lateral ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .contenido {
+            position: relative;
+            margin-left: 300px;
+        }
+
+        .contenido.abierto {
+            margin-left: 0;
+        }
+
+        .boton-abrir-menu {
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            position: fixed;
+            top: 0;
+            right: 300px;
+            z-index: 1;
+            transition: right 0.3s ease-in-out;
+        }
+
+        .contenido.abierto + .boton-abrir-menu {
+            right: 0;
+        }
+
+        @media screen and (max-width: 600px) {
+            .contenido {
+                margin-left: 0;
+            }
+            .boton-abrir-menu {
+                display: none;
+            }
+        }
+
     </style>
 
 </head>
@@ -129,5 +233,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
+
 
 
